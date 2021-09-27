@@ -31,7 +31,6 @@ export class GamesRepository implements IGamesRepository {
       .innerJoin("user.games", "game")
       .where("game.id = :id", { id })
       .getMany();
-
     return users;
   }
 }
